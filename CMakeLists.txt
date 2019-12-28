@@ -58,6 +58,8 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         ${CMAKE_CURRENT_BINARY_DIR}/bin/ip_filter.tsv
         )
 
+install(TARGETS range RUNTIME DESTINATION bin)
+
 set(CPACK_GENERATOR DEB)
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
